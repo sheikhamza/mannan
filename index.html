@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Wedding Invitation">
+    <meta property="og:description" content="Doughter of M.jawaid and ASIM AZHAR wedding digital invitation.">
+    <meta property="og:image" content="https://api.imghippo.com/files/xKj7690JM.png">
+    <meta property="og:url" content="https://tabahi-food.netlify.app/invitation">
+    <meta property="og:type" content="website">
+    <title>Ivory Elegance — Premium Digital Wedding Invitation</title>
+    <!-- Tailwind CSS CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>   
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="relative min-h-screen">
+    <!-- 1. PREMIUM 3D REVEAL EXPERIENCE (CURTAIN / DOOR OPENING OVERLAY) -->
+    <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#1E3F73]/40 backdrop-blur-md">
+        <!-- Left Panel -->
+        <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[#1E3F73] flex flex-col justify-center items-end pr-6 sm:pr-14 text-right shadow-xl">
+            <div class="animate__animated animate__fadeInLeft">
+                <p class="text-[#E6C96A] text-lg mb-3 font-script">Welcome To</p>
+                <h2 class="font-serif text-[#F5F8FC] text-3xl sm:text-5xl leading-tight">
+                    Digital
+                    <br>
+                    Invitation
+                </h2>
+                <div class="w-16 h-px bg-[#D4AF37] ml-auto mt-5 opacity-70"></div>
+            </div>
+        </div>
+        <!-- Right Panel -->
+        <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[#2F5EA8] flex flex-col justify-center items-start pl-6 sm:pl-14 text-left shadow-xl">
+            <div class="animate__animated animate__fadeInRight">
+                <p class="text-[#E6C96A] text-lg mb-3 font-script">Celebrate Love</p>
+                <h2 class="font-serif text-[#F5F8FC] text-3xl sm:text-5xl leading-tight">
+                    Wedding
+                    <br>
+                    Story
+                </h2>
+                <div class="w-16 h-px bg-[#D4AF37] mt-5 opacity-70"></div>
+            </div>
+        </div>
+        <!-- Center Logo Button -->
+        <div id="reveal-btn-container" class="absolute z-[60]">
+            <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#D4AF37]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
+                <!-- inner ring -->
+                <div class="absolute inset-2 rounded-full border border-[#D4AF37]/20"></div>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <img src="./images/temp-1/logo-z.png" alt="logo"
+                    class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
+                    <p class="mt-3 text-[#F5F8FC]  text-lg">TAP</p> 
+                </div>
+            </button>
+            <p class="text-center mt-5 text-[#F5F8FC] tracking-[0.3em] uppercase text-xs">
+                Tap to Open
+            </p>
+        </div>
+    </div>
+
+    <!-- BACKGROUND MUSIC PLAYER CONTROLLER -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button id="music-toggle" onclick="toggleMusic()" class="bg-[#132C4F]/90 text-[#D4AF37] border border-[#D4AF37] p-4 rounded-full shadow-2xl hover:bg-[#D4AF37] hover:text-[#132C4F] transition-all duration-300 flex items-center justify-center w-12 h-12 focus:outline-none cursor-pointer">
+            <i id="music-icon" class="fa-solid fa-music"></i>
+        </button>
+        <!-- Audio element with premium instrumental theme -->
+        <audio id="bg-audio" loop preload="auto">
+            <source src="./images/temp-1/audio.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <main>
+        <!-- Welcome Section -->
+        <section class="lg:min-h-screen bg-cover bg-center flex items-center justify-center welcome-section px-4 sm:px-6 overflow-hidden">
+
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 lg:-left-5 left-0 w-[52%] pointer-events-none flower-left" alt="Top Flower Image">
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 lg:-right-5 right-0 w-[52%] pointer-events-nonez flower-right" alt="Top Flower Image">
+
+            <div class="text-center max-w-3xl mx-auto py-10 mt-5 sm:mt-24 md:mt-30 relative z-10">
+
+                <p class="text-[#D4AF37] text-xl sm:text-2xl md:text-3xl tracking-[2px] Allura">
+                    The Wedding Of
+                </p>
+
+                <h1 class="text-[#1E3F73] text-3xl sm:text-4xl md:text-6xl Cormorant font-bold mt-3 leading-[0.9]">
+                    ABDUL MANNAN <br>
+                    <span class="text-[#D4AF37] font-semibold">
+                        &
+                    </span><br>
+                    D/o Muhammad Jawaid
+                </h1>
+
+                <p class="text-[#2F5EA8] text-sm sm:text-base md:text-lg Inter leading-tight font-medium mt-6">
+                    Two Hearts, One Journey, Endless Love <br>
+                    Welcome to our wedding celebration <br>
+                    Scroll down to witness our beautiful story
+                </p>
+
+                <div class="mt-8 animate-bounce">
+                    <i class="fa-solid fa-angles-down text-[#D4AF37] text-2xl md:text-3xl"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Date Reveal Section -->
+        <section class="bg-[#F5F8FC] date-reveal-section px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-16 2xl:gap-20">
+                <!-- Left Side -->
+                <div class="w-full xl:w-1/2 text-center">
+                    <h4 class="text-[#1E3F73] text-2xl sm:text-3xl lg:text-4xl Cormorant font-bold">
+                        A Special Date Awaits
+                    </h4>
+                    <img src="./images/temp-1/heading-leave.png" class="mx-auto -mt-2 mb-5 w-40 sm:w-50 h-10 sm:h-14">
+                    <div class="relative scratch-box mx-auto bg-stone-50 rounded-lg border border-dashed border-[#D4AF37] flex items-center justify-center shadow-inner overflow-hidden">
+                        <div class="text-center p-4">
+                            <p class="text-[#2F5EA8] font-bold uppercase tracking-wider text-xs">
+                                The Big Day
+                            </p>
+                            <p class="text-[#2F5EA8] font-bold uppercase tracking-[3px] text-md mt-2 Inter">
+                                You're Invited
+                            </p>
+                            <p id="wedding-date" class="text-xl sm:text-2xl lg:text-3xl font-bold text-[#D4AF37] mt-1">
+                                AUGUST 22, 2026
+                            </p>
+                            <p class="text-lg text-[#2F5EA8] mt-1">
+                                Sunday
+                            </p>
+                        </div>
+                        <canvas id="scratch-canvas" class="absolute inset-0 rounded-lg z-10"></canvas>
+                    </div>
+                    <div class="countdown-row mt-6 mx-auto">
+
+                        <div class="relative countdown-ring bg-[#E8EEF7] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#4A7ED1] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -top-8 sm:-top-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#1E3F73] Allura" id="days">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#2F5EA8]">Days</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E8EEF7] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#4A7ED1] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -bottom-8 sm:-bottom-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#1E3F73] Allura" id="hours">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#2F5EA8]">Hours</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E8EEF7] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#4A7ED1] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -top-4 sm:-top-5 -left-12 sm:-left-18 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#1E3F73] Allura" id="minutes">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#2F5EA8]">Mins</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E8EEF7] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#4A7ED1] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -bottom-8 sm:-bottom-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#1E3F73] Allura" id="seconds">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#2F5EA8]">Secs</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div id="save-date-card" class="save-date-card relative hidden opacity-0 transition-all duration-700 w-full max-w-lg text-center pt-8 lg:pt-12 mx-auto">
+                    <img src="./images/temp-1/round-line2.png" class="round-line2-decor mx-auto lg:-mt-20 rotate-180">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1E3F73] Allura">
+                        MANRAHI
+                    </h1>
+                    <h4 class="text-xl sm:text-2xl lg:text-3xl my-2 text-[#1E3F73] Inter">
+                        AUGUST
+                    </h4>
+                    <img src="./images/temp-1/calendar.png" class="calendar-img mx-auto">
+                    <div class="relative z-10 mt-6">
+                        <a id="save-date-btn" href="#" target="_blank" class="inline-block px-6 py-3 bg-[#1E3F73] text-white rounded-full cursor-pointer">
+                            Save The Date
+                        </a>
+                    </div>
+                    <img src="./images/temp-1/round-line2.png" class="round-line2-decor mx-auto -mt-4 sm:-mt-8">
+                </div>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="relative min-h-screen lg:h-[100vh] bg-[#E8EEF7] couple-section flex items-center justify-center py-12 sm:py-16 overflow-hidden">
+
+            <!-- Left Border -->
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -left-180 top-0 h-full w-auto rotate-90 pointer-events-none">
+
+            <!-- Right Border -->
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -right-180 top-0 h-full w-auto -rotate-90 pointer-events-none">
+
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-25 px-4 sm:px-6">
+                <div class="boy w-full max-w-[380px] text-center">
+                    <div class="rounded-full border border-[#1E3F73] w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-90 lg:h-90 flex items-center justify-center mx-auto">
+                        <div class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 overflow-hidden">
+                            <img
+                                src="./images/temp-1/mannan.jpg"
+                                class="w-full h-full object-cover object-[top_center]">
+                        </div>
+                    </div>
+                    <h4 class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#1E3F73] mt-5 Inter">ABDUL MANNAN</h4>
+                    <p class="text-[#2F5EA8] Inter text-center font-semibold mt-3 text-sm sm:text-base">
+                        <span>The son of</span> <br>
+                        <span class="font-semibold text-[#1E3F73]">Mr. & Mrs. MUJEEB KHAN</span>
+                    </p>
+                    <a href="https://www.instagram.com/abdulmannaankhan/" target="_blank" class="inline-block mt-5 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-3xl sm:text-4xl lg:text-5xl text-[#1E3F73]"></i>
+                    </a>
+                </div>
+                <div class="girl w-full max-w-[380px] text-center">
+                    <div class="rounded-full border border-[#1E3F73] w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-90 lg:h-90 flex items-center justify-center mx-auto">
+                        <div class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 overflow-hidden">
+                            <img
+                                src="./images/temp-1/girl.jpg"
+                                class="w-full h-full object-cover object-[top_center]">
+                        </div>
+                    </div>
+                    <h4 class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#1E3F73] mt-5 Inter">D/o M.Jawaid</h4>
+                    <p class="text-[#2F5EA8] Inter text-center font-semibold mt-3 text-sm sm:text-base">
+                        <span>The daughter of</span> <br>
+                        <span class="font-semibold text-[#1E3F73]">Mr. & Mrs. MUHAMMAD JAWAID</span>
+                    </p>
+                    <a href="https://www.instagram.com/zaroinvite/" target="_blank" class="inline-block mt-5 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-3xl sm:text-4xl lg:text-5xl text-[#1E3F73]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Wedding Info Section -->
+        <section class="relative bg-[#F5F8FC] wedding-info-section py-12 sm:py-16 text-center overflow-hidden px-4 sm:px-6">
+            <div class="relative flex items-center justify-center flex-col mb-8 sm:mb-10">
+                <h4 class="text-[#D4AF37] text-3xl sm:text-4xl lg:text-5xl Allura">When & Where</h4>
+                <!-- Small Divider -->
+                <div class="flex justify-center items-center gap-3">
+
+                    <div class="h-[1px] w-20 bg-[#D4AF37]"></div>
+
+                    <i class="fa-solid fa-heart text-[#D4AF37]"></i>
+
+                    <div class="h-[1px] w-20 bg-[#D4AF37]"></div>
+
+                </div>
+                <h4 class="text-[#1E3F73] text-2xl sm:text-3xl lg:text-5xl Cormorant font-bold">Our Wedding Program</h4>
+                <img src="./images/temp-1/heading-leave.png" class="mx-auto -mt-2 mb-5 w-40 sm:w-50 h-10 sm:h-14">
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+                <!-- Left Wedding Details -->
+                <div class="bg-[#E8EEF7] rounded-[20px] sm:rounded-[30px] p-6 sm:p-8 lg:p-10 text-left">
+                    <p class="text-[#D4AF37] uppercase tracking-[4px] text-sm font-semibold mb-3">
+                        Wedding Details
+                    </p>
+
+                    <!-- Date -->
+                    <div class="flex items-center gap-4 border-b border-[#D3DBE8] pb-5 mb-5">
+                        <div class="bg-[#1E3F73] h-14 w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#D4AF37] text-sm uppercase tracking-widest">
+                                Wedding Date
+                            </p>
+                            <h4 class="text-[#1E3F73] font-semibold text-base sm:text-lg lg:text-xl">
+                                Friday, August 22, 2026
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="flex items-center gap-4 border-b border-[#D3DBE8] pb-5 mb-5">
+                        <div class="bg-[#1E3F73] h-14 w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#D4AF37] text-sm uppercase tracking-widest">
+                                Reception Time
+                            </p>
+
+                            <h4 class="text-[#1E3F73] font-semibold text-base sm:text-lg lg:text-xl">
+                                8:00 PM
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Venue -->
+                    <div class="flex items-start gap-4">
+
+                        <div class="bg-[#1E3F73] min-h-14 min-w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#D4AF37] text-sm uppercase tracking-widest">
+                                Wedding Venue
+                            </p>
+
+                            <h4 class="text-[#1E3F73] font-semibold text-base sm:text-lg lg:text-xl">
+                                VELORA BANQUET
+                            </h4>
+
+                            <p class="text-[#2F5EA8] mt-2 leading-relaxed text-sm sm:text-base">
+                                Sector 49 Korangi, Karachi, Pakistan.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Button -->
+                    <a href="https://maps.app.goo.gl/pyP3AaN64mgjKrvq5?g_st=awb"
+                    target="_blank"
+                    class="inline-flex items-center gap-3 mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-[#1E3F73] text-white rounded-full hover:scale-105 transition duration-300 text-sm sm:text-base">
+
+                        <i class="fa-solid fa-location-dot"></i>
+                        Open In Google Maps
+
+                    </a>
+
+                </div>
+
+
+                <!-- Right Map -->
+                <div class="relative rounded-[20px] sm:rounded-[30px] overflow-hidden shadow-xl border-4 border-[#E8EEF7] h-[280px] sm:h-[380px] lg:h-[500px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.294511407864!2d67.148761!3d24.819599999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33b005d502803%3A0x72d228792c85efd!2sVELORA%20BANQUET!5e0!3m2!1sen!2s!4v1783329285036!5m2!1sen!2s"
+                    class="w-full h-full" loading="lazy"></iframe>
+
+                    <!-- Floating Date Badge -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 bg-[#F5F8FC] px-4 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg border border-[#D8E2F0] w-[90%] max-w-sm">
+
+                        <p class="text-[#D4AF37] text-xs tracking-[3px] uppercase">
+                            Save The Date
+                        </p>
+
+                        <h4 class="text-[#1E3F73] font-bold text-lg">
+                            22 • AUGUST • 2026
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="bg-[#F5F8FC] py-12 sm:py-16 lg:py-20 overflow-hidden px-4 sm:px-6">
+            <!-- Heading -->
+            <div class="text-center mb-6 sm:mb-8">
+                <h4 class="text-[#D4AF37] text-3xl sm:text-4xl lg:text-5xl Allura">RSVP</h4>
+                <!-- Small Divider -->
+                <div class="flex justify-center items-center gap-3">
+
+                    <div class="h-[1px] w-20 bg-[#D4AF37]"></div>
+
+                    <i class="fa-solid fa-heart text-[#D4AF37]"></i>
+
+                    <div class="h-[1px] w-20 bg-[#D4AF37]"></div>
+
+                </div>
+                <h2 class="text-[#1E3F73] text-2xl sm:text-3xl lg:text-5xl Cormorant font-bold mt-2">Contact Family</h2>
+                <img src="./images/temp-1/heading-leave.png" class="mx-auto w-32 sm:w-40 h-10 sm:h-12">
+            </div>
+
+            <div class="crew-carousel mx-auto relative max-w-full">
+
+                <!-- Left -->
+                <button
+                    class="crew-arrow crew-left z-50 bg-[#1E3F73] text-white w-12 h-12 rounded-full shadow-xl hover:scale-110 transition"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="crew-track"></div>
+                <!-- Right -->
+                <button
+                    class="crew-arrow crew-right z-50 bg-[#1E3F73] text-white w-12 h-12 rounded-full shadow-xl hover:scale-110 transition"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Footer Section -->
+        <section class="relative bg-[#1E3F73] overflow-hidden py-12 sm:py-10 text-center px-4">
+            <!-- Decorative Top Flowers -->
+            <img src="./images/temp-1/top.png" class="pointer-events-none absolute -top-20 left-0 w-[250px] opacity-25 rotate-180">
+            <img src="./images/temp-1/top.png" class="pointer-events-none absolute -top-20 right-0 w-[250px] opacity-25">
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <img src="./images/temp-1/logo.png" class="mx-auto mb-5 h-16 sm:h-20 w-auto">
+                <!-- Thank You -->
+                <p class="text-[#D8E2F0] text-lg Allura">
+                    Thank You
+                </p>
+                <h2 class="text-white text-2xl sm:text-3xl lg:text-4xl Cormorant font-bold mt-2 leading-tight">
+                    ABDUL MANNAN
+                    <span class="text-[#D4AF37]">&</span>
+                    D/o M.Jawaid
+                </h2>
+                <!-- Footer Bottom -->
+                <div class=" border-t border-[#D4AF37]/30 pt-6">
+                    <div class="text-center space-y-3">
+                        <p class="text-[#E7EEF9] text-lg">
+                            Made with <span class="text-[#D4AF37]">❤</span> by
+                            <span class="text-[#D4AF37] font-bold">
+                                <a href="https://instagram.com/zaroinvite" target="_blank">ZaroInvite</a>
+                            </span>
+                            Create your invitation
+                        </p>
+                        <div class="lg:flex items-center justify-center gap-6
+                        text-[#D8E2F0] text-lg">
+                            <div>
+                                <a href="tel:+923001234567"
+                                class="hover:text-[#D4AF37] transition">
+                                    <i class="fa-solid fa-phone text-[20px] mr-2"></i>
+                                    +92 308 8291483
+                                </a>
+                            </div>
+                            <span class="opacity-40 hidden lg:block">|</span>
+                            <div>
+                                <a href="https://instagram.com/zaroinvite"
+                                target="_blank"
+                                class="hover:text-[#D4AF37] transition">
+                                    <i class="fa-brands fa-instagram mr-2"></i>
+                                    @zaroinvite
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scratch -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="scratch.js"></script>
+    <!-- slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
+    <!-- Reveal js -->
+    <script src="reveal.js"></script>
+</body>
+</html>

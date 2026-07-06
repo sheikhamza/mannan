@@ -1,0 +1,452 @@
+:root {
+    --primary: #2F5EA8;        /* Premium Royal Blue */
+    --primary-dark: #1E3F73;   /* Deep Navy Blue */
+    --background: #F5F8FC;     /* Soft Ice White */
+    --section: #E8EEF7;        /* Light Blue Gray */
+    --accent: #D4AF37;         /* Luxury Gold Accent */
+    --beige: #D8E2F0;          /* Soft Cool Neutral */
+    --border: #C7D4E5;         /* Elegant Border */
+    --text: #2B3440;           /* Rich Dark Text */
+}
+/* Heading */
+.Cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Script */
+.Allura {
+    font-family: 'Allura', cursive;
+}
+
+.Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Body */
+body {
+    font-family: 'Inter', 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+.welcome-section {
+    background-image: url('./images/temp-1/welcome-bg.avif');
+}
+
+.crew-carousel{
+    width:100%;
+    max-width:1000px;
+    height:500px;
+    position:relative;
+    margin:auto;
+    perspective:1000px;
+}
+
+.crew-track{
+    width:100%;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.crew-card{
+    position:absolute;
+    width:280px;
+    height:390px;
+    transition:all .8s ease;
+}
+
+.crew-card.center{
+    transform:translateX(0) scale(1.05);
+    z-index:10;
+    opacity:1;
+}
+
+.crew-card.left-1{
+    transform:translateX(-110px) scale(.9);
+    z-index:8;
+    opacity:.8;
+}
+
+.crew-card.left-2{
+    transform:translateX(-200px) scale(.75);
+    z-index:6;
+    opacity:.4;
+}
+
+.crew-card.right-1{
+    transform:translateX(110px) scale(.9);
+    z-index:8;
+    opacity:.8;
+}
+
+.crew-card.right-2{
+    transform:translateX(200px) scale(.75);
+    z-index:6;
+    opacity:.4;
+}
+
+.crew-card.hidden{
+    opacity:0;
+    pointer-events:none;
+}
+
+.crew-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.crew-left{
+    left:-20px;
+}
+
+.crew-right{
+    right:-20px;
+}
+
+@media(max-width:768px){
+
+    .crew-carousel{
+        height:420px;
+        padding:0 2.5rem;
+    }
+
+    .crew-card{
+        width:230px;
+        height:340px;
+    }
+
+    .crew-card.left-1{
+        transform:translateX(-80px) scale(.8);
+    }
+
+    .crew-card.right-1{
+        transform:translateX(80px) scale(.8);
+    }
+
+    .crew-card.left-2,
+    .crew-card.right-2{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    .crew-left{
+        left:0;
+    }
+
+    .crew-right{
+        right:0;
+    }
+
+}
+
+.countdown-ring{
+    width:9.5rem;
+    height:9.5rem;
+    flex-shrink:0;
+}
+
+.countdown-row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+
+@media(min-width:768px){
+    .countdown-row{
+        flex-wrap:nowrap;
+        gap:1.25rem;
+    }
+}
+
+@media(min-width:1280px){
+    .countdown-row{
+        gap:1.5rem;
+    }
+}
+
+@media(min-width:1280px) and (max-width:1535px){
+    .countdown-ring{
+        width:8.5rem;
+        height:8.5rem;
+    }
+
+    .countdown-ring .countdown-num{
+        font-size:2.75rem;
+    }
+}
+
+@media(max-width:640px){
+    .countdown-ring{
+        width:7rem;
+        height:7rem;
+    }
+
+    .countdown-ring .countdown-num{
+        font-size:2.5rem;
+    }
+
+    .countdown-ring .countdown-label{
+        font-size:14px;
+    }
+}
+
+.scratch-box{
+    width:100%;
+    max-width:400px;
+    aspect-ratio:8/5;
+}
+
+.save-date-card img.round-line-decor{
+    height:clamp(300px,50vw,600px);
+    width:clamp(150px,25vw,300px);
+}
+
+.save-date-card img.calendar-img{
+    width:100%;
+    max-width:400px;
+}
+
+.save-date-card img.round-line2-decor{
+    width:100%;
+    max-width:580px;
+    height:auto;
+}
+
+.couple-border{
+    display:none;
+}
+
+@media(min-width:1024px){
+    .couple-border{
+        display:block;
+    }
+}
+
+.crew-card .crew-card-inner{
+    padding:1.25rem;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.crew-card .crew-avatar{
+    width:7rem;
+    height:7rem;
+    flex-shrink:0;
+    border:5px solid var(--accent);
+}
+
+.crew-card .crew-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:1rem;
+}
+
+.crew-card .crew-phone{
+    max-width:100%;
+    justify-content:center;
+    text-align:center;
+    word-break:break-all;
+}
+
+@media(min-width:640px){
+    .crew-card .crew-card-inner{
+        padding:1.5rem;
+    }
+
+    .crew-card .crew-avatar{
+        width:10rem;
+        height:10rem;
+    }
+
+    .crew-card .crew-info{
+        margin-top:1.5rem;
+    }
+
+    .crew-card .crew-phone{
+        word-break:normal;
+        white-space:nowrap;
+    }
+}
+
+@media(max-width:768px){
+    .crew-card .crew-avatar{
+        width:5.5rem;
+        height:5.5rem;
+    }
+
+    .crew-card .crew-name{
+        font-size:1.25rem;
+    }
+
+    .crew-card .crew-role{
+        font-size:0.8125rem;
+    }
+
+    .crew-card .crew-phone{
+        font-size:0.6875rem;
+        padding:0.45rem 0.75rem;
+        max-width:calc(100% - 0.5rem);
+    }
+
+    .crew-card .crew-info{
+        margin-top:0.875rem;
+    }
+}
+
+@media(max-width:480px){
+    .crew-carousel{
+        height:360px;
+        padding:0 2rem;
+    }
+
+    .crew-card{
+        width:185px;
+        height:310px;
+    }
+
+    .crew-card .crew-card-inner{
+        padding:0.875rem;
+    }
+
+    .crew-card .crew-avatar{
+        width:4.5rem;
+        height:4.5rem;
+        border-width:3px;
+    }
+
+    .crew-card .crew-info{
+        margin-top:0.75rem;
+    }
+
+    .crew-card .crew-name{
+        font-size:1.125rem;
+        line-height:1.2;
+    }
+
+    .crew-card .crew-role{
+        font-size:0.75rem;
+        margin-top:0.25rem;
+    }
+
+    .crew-card .crew-phone{
+        margin-top:0.75rem;
+        padding:0.4rem 0.625rem;
+        font-size:0.625rem;
+        gap:0.25rem;
+    }
+
+    .crew-card .crew-phone i{
+        font-size:0.625rem;
+    }
+
+    .crew-card.left-1{
+        transform:translateX(-60px) scale(.78);
+    }
+
+    .crew-card.right-1{
+        transform:translateX(60px) scale(.78);
+    }
+}
+
+
+/* Custom Curtains / Luxury Door Reveal Animation */
+.curtain-panel {
+    transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.reveal-active .curtain-left {
+    transform: translateX(-100%);
+}
+.reveal-active .curtain-right {
+    transform: translateX(100%);
+}
+.reveal-active .curtain-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s ease 0.4s;
+}
+
+
+.curtain-left,
+.curtain-right{
+transition:all 1.5s cubic-bezier(.77,0,.18,1);
+}
+
+.curtain-left.open{
+transform:translateX(-100%);
+}
+
+.curtain-right.open{
+transform:translateX(100%);
+}
+
+
+/* Animation flower */
+.flower-left {
+    animation: swayLeft 6s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.flower-right {
+    animation: swayRight 6s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes swayLeft {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+        transform: rotate(2deg) translateY(-5px);
+    }
+    50% {
+        transform: rotate(-2deg) translateY(3px);
+    }
+    75% {
+        transform: rotate(1deg) translateY(-3px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}
+
+@keyframes swayRight {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+        transform: rotate(-2deg) translateY(-5px);
+    }
+    50% {
+        transform: rotate(2deg) translateY(3px);
+    }
+    75% {
+        transform: rotate(-1deg) translateY(-3px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}
+
+.blend-right{
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0,0,0,0.4) 20%,
+        rgba(0,0,0,1) 40%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0,0,0,0.4) 20%,
+        rgba(0,0,0,1) 40%
+    );
+}
