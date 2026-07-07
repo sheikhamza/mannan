@@ -96,47 +96,65 @@
     </script>
 <body class="relative min-h-screen">
     <!-- 1. PREMIUM 3D REVEAL EXPERIENCE (CURTAIN / DOOR OPENING OVERLAY) -->
-    <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#1E3F73]/40 backdrop-blur-md">
-        <!-- Left Panel -->
-        <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[#1E3F73] flex flex-col justify-center items-end pr-6 sm:pr-14 text-right shadow-xl">
-            <div class="animate__animated animate__fadeInLeft">
-                <p class="text-[#E6C96A] text-lg mb-3 font-script">Welcome To</p>
-                <h2 class="font-serif text-[#F5F8FC] text-3xl sm:text-5xl leading-tight">
-                    Digital
-                    <br>
-                    Invitation
-                </h2>
-                <div class="w-16 h-px bg-[#D4AF37] ml-auto mt-5 opacity-70"></div>
-            </div>
-        </div>
-        <!-- Right Panel -->
-        <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[#2F5EA8] flex flex-col justify-center items-start pl-6 sm:pl-14 text-left shadow-xl">
-            <div class="animate__animated animate__fadeInRight">
-                <p class="text-[#E6C96A] text-lg mb-3 font-script">Celebrate Love</p>
-                <h2 class="font-serif text-[#F5F8FC] text-3xl sm:text-5xl leading-tight">
-                    Wedding
-                    <br>
-                    Story
-                </h2>
-                <div class="w-16 h-px bg-[#D4AF37] mt-5 opacity-70"></div>
-            </div>
-        </div>
-        <!-- Center Logo Button -->
-        <div id="reveal-btn-container" class="absolute z-[60]">
-            <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#D4AF37]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
-                <!-- inner ring -->
-                <div class="absolute inset-2 rounded-full border border-[#D4AF37]/20"></div>
-                <div class="flex flex-col items-center justify-center h-full">
-                    <img src="./images/temp-1/logo-z.png" alt="logo"
-                    class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
-                    <p class="mt-3 text-[#F5F8FC]  text-lg">TAP</p> 
+    <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#59614E]/40 backdrop-blur-md">
+            <!-- Left Panel -->
+            <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[var(--primary-dark)]"></div>
+            <img src="./images/temp-1/side-leave.png" alt="leave" class="absolute top-0 -left-13 w-full sm:w-auto h-full">
+            <!-- Right Panel -->
+            <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[var(--primary)]"></div>
+            <img src="./images/temp-1/side-leave.png" alt="leave" class="absolute top-0 -right-15 sm:-right-7 w-full sm:w-auto h-full rotate-180">
+
+            <!-- Center Content -->
+            <div id="reveal-btn-container" class="absolute inset-0 z-[60] flex flex-col items-center justify-center text-center px-5">
+
+                <!-- Welcome -->
+                <div>
+                    <img src="./images/temp-1/taj.png" alt="logo" class="w-32 sm:w-36 md:w-44 mx-auto mb-3">
+                    <p class="text-[var(--background)] mb-2 uppercase tracking-[0.35em] text-[22px] sm:text-lg md:text-[2rem] font-[Cormorant]">Welcome</p>
+                    <h2 class="text-[var(--gold)] text-sm sm:text-2xl md:text-[1.2rem] tracking-[0.22em] leading-snug">
+                        TO OUR SPECIAL DAY
+                    </h2>
+                    <img src="./images/temp-1/line.png" class="mx-auto mb-2 w-40 sm:w-50 h-2 sm:h-3 mt-2">
                 </div>
-            </button>
-            <p class="text-center mt-5 text-[#F5F8FC] tracking-[0.3em] uppercase text-xs">
-                Tap to Open
-            </p>
+                <!-- Wedding -->
+                <div>
+                    <p class="text-[var(--background)]  text-sm sm:text-2xl md:text-[1.2rem] tracking-[0.22em] leading-snug">THE WEDDING OF</p>
+                    <h1 class="font-script text-[var(--gold)] text-[30px] sm:text-lg md:text-[2.2rem] font-[Comorant] italic">
+                        ABDUL MANNAN
+                    </h1>
+                    <img src="./images/temp-1/line.png" class="mx-auto mb-2 w-40 sm:w-50 h-2 sm:h-3 mt-2">
+                </div>
+                
+                <!-- Badge -->
+                <div>
+                    <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#D4AF37]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
+                        <!-- inner ring -->
+                        <div class="absolute inset-2 rounded-full border border-[#D4AF37]/20"></div>
+                        <div class="flex flex-col items-center justify-center h-full">
+                            <img src="./images/temp-1/logo-z.png" alt="logo"
+                            class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
+                            <p class="mt-3 text-[#F5F8FC]  text-lg">TAP</p> 
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- Guest -->
+                <div class="relative">
+                    <img src="./images/temp-1/gold-boder.png" alt="logo" class="absolute w-10  mx-auto mb-3 rotate-[90deg]">
+                    <img src="./images/temp-1/gold-boder.png" alt="logo" class="absolute right-0 w-10 mx-auto mb-3 rotate-[180deg]">
+                    <p class="text-[var(--gold)] mt-3 md:mt-4 text-lg sm:text-2xl md:text-[1.2rem] tracking-[0.22em] leading-snug">Dear Guest</p>
+                    <h2 id="guest-name" class="font-[Allura] text-[var(--background)] text-4xl sm:text-4xl md:text-5xl">
+                        Hamza Sheikh
+                    </h2>
+                    <img src="./images/temp-1/line.png" class="mx-auto mb-2 w-40 sm:w-50 h-2 sm:h-3 mt-2">
+                    <p class="text-[var(--background)] text-sm sm:text-sm md:text-base leading-6 tracking-[0.1em]">
+                        You are warmly invited
+                        <br>
+                        to share in our special day
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
 
     <!-- BACKGROUND MUSIC PLAYER CONTROLLER -->
     <div class="fixed bottom-6 right-6 z-40">
