@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', resizeCanvas);
 
     // Google Calendar Link
-    const startDate = "20260821T190000";
-    const endDate = "20260821T230000";
+    const startDate = "20260822T190000";
+    const endDate = "20260822T230000";
 
     const calendarUrl =
         `https://calendar.google.com/calendar/render?action=TEMPLATE` +

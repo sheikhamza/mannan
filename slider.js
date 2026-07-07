@@ -2,28 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const crewMembers = [
         {
-            name:"HAMZA SHEIKH",
-            role:"Brother",
-            phone:"+92 000 00000000",
-            image:"./images/temp-1/hamza.png"
+            name:"Abdul Mujeeb Khan Afridi",
+            role:"Father",
+            phone:"+92 333 2169415",
+            image:"./images/temp-1/mujeeb.jpeg"
         },
         {
-            name:"ALEEM UDDIN",
+            name:"Arsalan Khan Afridi",
             role:"Brother",
-            phone:"+92 000 00000000",
-            image:"https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=900"
+            phone:"+92 315 2820714",
+            image:"./images/temp-1/arsalan.png"
         },
         {
-            name:"SAIB KHAN",
-            role:"Father of Bride",
-            phone:"+92 000 00000000",
-            image:"https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=900"
-        },
-        {
-            name:"SHAYAN",
-            role:"Brother",
-            phone:"+92 92 000 00000000",
-            image:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900"
+            name:"Haris Khan",
+            role:"Brother in law",
+            phone:"+92 348 4681097",
+            image:"./images/temp-1/haris.jpeg"
         }
     ];
 
